@@ -19,6 +19,9 @@ For a page `<name>`, the content for that page will be (by default) in:
 
 which is also easily editable by a text editor on the server.
 
+This program serves as the motivation for my article on 
+[web programming in Racket](http://matt.might.net/articles/low-level-web-in-racket/).
+
 
 ## Dependencies
 
