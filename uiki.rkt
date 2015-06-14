@@ -23,6 +23,7 @@
 ; + git
 ; + multimarkdown
 ; + sed
+; + htpasswd (bundled with apache)
 
 ; FEATURES:
 
