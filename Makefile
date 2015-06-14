@@ -9,7 +9,7 @@ db:
 	cp -v res/content.md db/main/
 
 passwd:
-	echo Enter a password for the user `admin`:
+	echo 'Enter a password for the user `admin`':
 	@htpasswd -sc passwd admin
 
 docroot:
