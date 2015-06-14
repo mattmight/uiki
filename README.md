@@ -17,6 +17,8 @@ For a page `<name>`, the content for that page will be (by default) in:
 
     db/<name>/content.md
 
+which is also easily editable by a text editor on the server.
+
 
 ## Dependencies
 
@@ -143,8 +145,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
+```
 
 
 [prettify]: https://github.com/google/code-prettify
