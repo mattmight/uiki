@@ -119,13 +119,11 @@ as in:
 You can render code with syntax highlighting in 
 a fenced block by specifying the language, as in:
 
-`````
-```javascript
-function main () {
-   printf("Running some code.")
-}
-```
-`````
+    ```javascript
+    function main () {
+       printf("Running some code.")
+    }
+    ```
 
 ## License
 
