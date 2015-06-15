@@ -81,15 +81,6 @@
 (include "config.rkt")
 
 
-; Functional programming helpers:
-(define (any? pred list)
-  ; returns true iff any element matches pred:
-  (match list
-    ['()  #f]
-    [(cons hd tl)
-     (or (pred hd) (any? pred (cdr list)))]))
-
-
 ; I/O and filesystem helpers:
 (define (file->bytes filename)
   ; read a file into bytes;
@@ -207,7 +198,7 @@
               (equal? hashpass sha1-pass-b64))]))
   
   ; check to see if any line validates:
-  (any? password-matches? lines))
+  (ormap password-matches? lines))
 
 (define (authenticated? passwd-file req)
   ; checks if a request has valid credentials:
