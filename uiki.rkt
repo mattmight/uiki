@@ -194,6 +194,9 @@
 ; A handler for static files:
 (define (handle-file-request req docroot path)
   
+  ; NOTE: In practice, static requests can be replaced by
+  ; providing an #:extra-files-paths to serve/servlet.
+  
   ; identify the requested file:
   (define file (string-append docroot "/" (string-join path "/")))
   
