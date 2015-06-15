@@ -82,14 +82,6 @@
 
 
 ; I/O and filesystem helpers:
-(define (file->bytes filename)
-  ; read a file into bytes;
-  (call-with-input-file filename port->bytes))
-
-(define (file->string filename)
-  ; read a file into a string:
-  (call-with-input-file filename port->string))
-
 (define (file-extension path)
   ; extract the extension from the file at the end of the path:
   (define path-parts (string-split path "/"))
