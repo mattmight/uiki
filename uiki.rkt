@@ -81,16 +81,6 @@
 (include "config.rkt")
 
 
-; I/O and filesystem helpers:
-(define (file-extension path)
-  ; extract the extension from the file at the end of the path:
-  (define path-parts (string-split path "/"))
-  (define name-parts (string-split (last path-parts) "."))
-  (if (= (length name-parts) 1)
-      ""
-      (last name-parts)))
-
-
 ; Shell interaction:
 (define ($ command)
   ; run a shell command, then
@@ -210,7 +200,7 @@
   (cond
     [(file-exists? file)
      ; =>
-     (define extension (string->symbol (file-extension file)))
+     (define extension (string->symbol (bytes->string/utf-8 (filename-extension file))))
      (define content-type 
        (hash-ref ext=>mime-type extension 
                  (λ () TEXT/HTML-MIME-TYPE)))
