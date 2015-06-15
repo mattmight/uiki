@@ -456,6 +456,11 @@ MathJax.Hub.Config({
   
   (define resource (cdr path))
   
+  ; NOTE: This could be simplified with a higher-level
+  ; interface for web-server/dispatch:
+  
+  ; http://docs.racket-lang.org/web-server/dispatch.html
+  
   (cond
     [(and auth-db-path (not (authenticated? auth-db-path req)))
      (response
