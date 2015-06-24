@@ -6,7 +6,7 @@ run: config.rkt db docroot passwd
 db:
 	mkdir db
 	mkdir db/main
-	cp -v res/content.md db/main/
+	cp -v resources/content.md db/main/
 
 passwd:
 	echo 'Enter a password for the user `admin`':
@@ -14,7 +14,7 @@ passwd:
 
 docroot:
 	mkdir docroot
-	cp -v res/test.html docroot/
+	cp -v resources/test.html docroot/
 
 certs:
 	mkdir certs
